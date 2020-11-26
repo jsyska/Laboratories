@@ -26,7 +26,7 @@ public class Lab6 {
 		
 		return gcd;
 	}
-	
+	//Euclid's alrogithm
 	public static int greatestCommonDivisorR(int a, int b) {
 		if (b == 0) return a;
 		return greatestCommonDivisorR(b, a%b);

@@ -1,4 +1,4 @@
-package start;
+package additionalTasks;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -8,7 +8,7 @@ import java.math.RoundingMode;
 import java.util.Scanner;
 
 
-public class test {
+public class PiDigits {
 	
 	public static BigDecimal betterCalcPi(long acc) {
 		BigDecimal k1 = new BigDecimal("545140134");
