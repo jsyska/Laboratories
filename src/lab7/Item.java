@@ -10,7 +10,9 @@ public class Item {
 		if(quantity>0 && quantity<21) {
 			this.quantity= quantity;
 		}
-		this.comment=comment;
+		if(comment != null) {
+			this.comment=comment;
+		}
 	}
 	
 	public Item(ProductType product, int quantity) {
@@ -25,15 +27,11 @@ public class Item {
 	}
 	
 	public boolean addItem() {
-		if (quantity<20) {
-			quantity++;
-			return true;
-		}
-		return false;
+		return addItems(1);
 	}
 	
 	public boolean addItems(int number) {
-		if(quantity + number < 21) {
+		if(quantity + number < 21 && quantity + number > 0) {
 			quantity = quantity + number;
 			return true;
 		}
@@ -41,24 +39,24 @@ public class Item {
 	}
 	
 	public boolean remove(int number) {
-		if(quantity - number >0) {
-			quantity = quantity - number;
-			return true;
-		}
-		return false;
+		return addItems(-number);
 	}
 	
 	public int getQuantity() {
 		return this.quantity;
 	}
 	
+	public ProductType getProduct() {
+		return product;
+	}
+
 	public double getTotalWeight() {
 		return product.getWeight() * quantity;
 	}
 
 	@Override
 	public String toString() {
-		return "Item [product=" + product + ", quantity=" + quantity + ", comment=" + comment + "]";
+		return "[product: " + product.show() + ", quantity: " + quantity + ", comment: \"" + comment + "\"]";
 	}
 	
 	public boolean equals(Item other) {
