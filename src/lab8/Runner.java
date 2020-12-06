@@ -236,6 +236,11 @@ public class Runner {
 		System.out.println("Expected: false, result: " + shoppingBag1.equals(shoppingBag3));
 		shoppingBag2.putIn(bread);
 		System.out.println("Expected: false, result: " + shoppingBag1.equals(shoppingBag2));
+		
+		//Total weight method for shopping bag
+		System.out.println();
+		System.out.println("Get total weight method for shopping bag");
+		System.out.println("Expected: 36.6, result: " + shoppingBag.getTotalWeight());
 
 		
 	}
