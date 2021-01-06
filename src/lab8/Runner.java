@@ -17,11 +17,10 @@ public class Runner {
 		Bag bag = new Bag(40);
 		HandHoldBag handHoldBag = new HandHoldBag(true);
 		ShoppingBag shoppingBag = new ShoppingBag(true);
-		
 		try {
-			Bag invalidBag = new Bag(0);
+			new Bag(0);
 		} catch (IllegalArgumentException e) {
-			System.out.println(e.getMessage());
+			System.out.println(e);
 		}
 		
 		System.out.println();
@@ -47,6 +46,7 @@ public class Runner {
 		shoppingBag.putIn(tea);
 		
 		System.out.println();
+		System.out.println("-- putIn() method--");
 		System.out.println("Expected: Bag with items: bread, tea");
 		System.out.println(bag);
 		
@@ -92,6 +92,7 @@ public class Runner {
 		shoppingBag.removeAllItems();
 		
 		System.out.println();
+		System.out.println("--removeAllItems() method--");
 		System.out.println("--All bags should be epmty--");
 		
 		System.out.println();
@@ -110,13 +111,14 @@ public class Runner {
 		//remove method test
 		
 		System.out.println();
+		System.out.println("--remove() mtehod--");
 		System.out.println("Remove only items of type: milk from bags");
 		
 		Item milk1 = new Item(ProductType.MILK, 1);
 		Item milk2 = new Item(ProductType.MILK, 2);
 		Item milk3 = new Item(ProductType.MILK, 3);
 		Item tea1 = new Item(ProductType.TEA, 2);
-		Item tea2 = new Item(ProductType.TEA, 2);
+		
 		bag.putIn(milk1);
 		bag.putIn(milk2);
 		bag.putIn(tea1);

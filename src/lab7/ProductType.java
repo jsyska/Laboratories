@@ -36,5 +36,4 @@ public enum ProductType {
 			System.out.println(p.show());
 		}
 	}
-	
 }

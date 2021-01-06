@@ -59,11 +59,21 @@ public class Item {
 		return "[product: " + product.show() + ", quantity: " + quantity + ", comment: \"" + comment + "\"]";
 	}
 	
-	public boolean equals(Item other) {
-		if(quantity == other.quantity && product == other.product) return true;
-		return false;
+//	public boolean equals(Item other) {
+//		if(quantity == other.quantity && product == other.product) return true;
+//		return false;
+//	}
+	
+	public boolean equals(Object other) {
+		if(other == this )
+			return true;
+		if(other == null)
+			return false;
+		if(getClass() != other.getClass())
+			return false;
+		Item item = (Item) other;
+		if(item.getQuantity()!= getQuantity())
+			return false;
+		return product.equals(item.product);
 	}
-	
-	
-	
 }
