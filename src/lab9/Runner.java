@@ -61,7 +61,6 @@ public class Runner {
 		System.out.println("--Constructor and toString methods for UniqueWords--");
 		UniqueWords uwrd1 = new UniqueWords("Cat Dog Mouse");
 		System.out.println("Expected result: Cat Dog Mouse, actual result: " + uwrd1);
-		String str2 = null;
 		UniqueWords uwrd2 = new UniqueWords(str);
 		System.out.println("Expedted result: \"\", actual result:" +"\""+ uwrd2 + "\"");
 		
